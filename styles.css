@@ -1,0 +1,51 @@
+.header-text,
+.header-sub-text {
+  font-family: monospace;
+}
+
+.toss-section {
+  border-style: solid;
+  border-color: rgb(17, 12, 12);
+  border-width: 1px;
+  border-radius: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 1040;
+}
+
+.coin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  perspective: 1000px; /* Adds depth effect */
+}
+
+.spin-vertical {
+  animation: spinY 0.5s linear infinite;
+}
+
+@keyframes spinY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.bg-image {
+  background-image: url("assets/images/watercolor.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
